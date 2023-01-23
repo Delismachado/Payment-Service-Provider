@@ -13,5 +13,12 @@ type manage struct {
 }
 
 func NewManage() *manage {
-	HealthCheck := HealthCheck()
+	//health.HealthCheck()
+	HealthCheck := health.HealthCheck()
+
+	return nil
+}
+
+func (m *manage) Routes(g *gin.RouterGroup) {
+	m.health.RegisterRoutes(g)
 }

@@ -7,7 +7,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.GET("/heath")
+	mr := manage.Routes(router.Group)
 
 	router.Run()
 }
